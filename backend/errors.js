@@ -1,17 +1,16 @@
-module.exports.Success = {
+module.exports.success = {
     code : 200,
-    message : res
+    message : ""
 };
 
 module.exports.successWithData = {
     code : 200,
     message : "Success",
-    data : res
 };
 
-module.exports.SomethingWentWrong = {
+module.exports.somethingWentWrong = {
     code : 400,
-    message : res
+    message : ""
 };
 
 module.exports.badRequest = {

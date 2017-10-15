@@ -32,13 +32,16 @@ app.controller('testController', ($scope, $http) => {
         });
     }
 
-
     // Edit
     $scope.changeSkill = function(index) {
         $http
         .post('http://127.0.0.1:5000/apis/skill/edit', { id: index.id, name: index.name, status: index.status })
         .then((res) => {
-            $scope.list();
+            if(res.data.code == 400){
+                alert(res.data.message);
+            } else {
+                $scope.list();
+            }
         });
     }
 
