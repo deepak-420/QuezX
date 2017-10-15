@@ -115,7 +115,6 @@ var updateSkillStatus = function(data, callback) {
                 }
         });
         dataToBeUpdated[0].status = data.status;
-        console.log(dataToBeUpdated);
         skills.update(dataToBeUpdated);
         callback(0, "Success")
     } catch(e){

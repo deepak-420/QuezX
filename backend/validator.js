@@ -17,7 +17,6 @@ const Joi = require('joi');
  *  @description This function is used for validatinng the incoming request for adding/editing/listing/changing status of a skill..
  */
 module.exports.common = function (req, res, next) {
-
     const schema = Joi.object().keys({
         id: Joi.number().required(),
         name: Joi.string().required(),
